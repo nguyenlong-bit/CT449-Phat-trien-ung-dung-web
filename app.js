@@ -17,4 +17,5 @@ router.route("/:id")
     .delete(contacts.delete);
 
 app.use("/api/contacts", contactsRouter);
-module.exports = router;
+
+module.exports = app;

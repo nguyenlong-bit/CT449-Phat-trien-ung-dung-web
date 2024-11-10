@@ -3,14 +3,14 @@
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon server.js",
+    "start": "nodemon server.js"
   },
   "author": "Anh Long",
   "license": "ISC",
   "description": "",
   "dependencies": {
     "cors": "^2.8.5",
-    "express": "^4.21.1",
+    "express": "^4.21.1"
   },
   "devDependencies": {
     "eslint": "^9.14.0",
@@ -19,6 +19,3 @@
     "prettier": "^3.3.3"
   }
 }
-
-
-  
