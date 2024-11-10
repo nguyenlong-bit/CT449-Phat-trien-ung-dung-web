@@ -4,7 +4,6 @@
   "main": "server.js",
   "scripts": {
     "start": "nodemon server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Anh Long",
   "license": "ISC",
@@ -12,7 +11,6 @@
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.21.1",
-    "mongodb": "^6.10.0"
   },
   "devDependencies": {
     "eslint": "^9.14.0",
@@ -21,3 +19,6 @@
     "prettier": "^3.3.3"
   }
 }
+
+
+  
