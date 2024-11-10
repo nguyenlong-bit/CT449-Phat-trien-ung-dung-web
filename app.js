@@ -1,14 +1,20 @@
 const express = require("express");
-const cors = require("cors");
+const contactsRouter = require("./app/routes/contact.route");
 
-const app = express();
+const router = express.Router();
 
-app.use(cors());
-app.use(express.json());
+router.route("/")
+    .get(contacts.findAll)
+    .post(contacts.create)
+    .delete(contacts.deleteAll);
 
-// Route gốc
-app.get("/", (req, res) => {
-  res.json({ message: "Welcome to contact book application." });
-});
+router.route("/favorite")
+    .get(contacts.findAllFavorite);
 
-module.exports = app;
+router.route("/:id")
+    .get(contacts.findOne)
+    .put(contacts.update)
+    .delete(contacts.delete);
+
+app.use("/api/contacts", contactsRouter);
+module.exports = router;

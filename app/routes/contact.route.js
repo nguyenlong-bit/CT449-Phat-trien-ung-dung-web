@@ -1,5 +1,5 @@
 const express = require("express");
-const contactsRouter = require("./app/routes/contact.route");
+const contacts = require("../controllers/contact.controller");
 
 const router = express.Router();
 
@@ -16,5 +16,4 @@ router.route("/:id")
   .put(contacts.update)
   .delete(contacts.delete);
 
-  app.use("/api/contacts", contactsRouter);
 module.exports = router;

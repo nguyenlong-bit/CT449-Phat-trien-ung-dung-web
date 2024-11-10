@@ -1,15 +1,5 @@
-exports.create = async (req, res, next) => {
-  try {
-    if (!req.body?.name) {
-      return next(new ApiError(400, "Name can not be empty"));
-    }
-
-    const contactService = new ContactService(MongoDB.client);
-    const document = await contactService.create(req.body);
-    return res.send(document);
-  } catch (error) {
-    return next(new ApiError(500, "An error occurred while creating the contact"));
-  }
+exports.create = (req, res) => {
+  res.send({ message: "create handler" });
 };
 
 exports.findAll = (req, res) => {
@@ -17,7 +7,7 @@ exports.findAll = (req, res) => {
 };
 
 exports.findOne = (req, res) => {
-  res.send({ message: "findOne handler" });
+  res.send({ message:  "findOne handler" });
 };
 
 exports.update = (req, res) => {
@@ -33,5 +23,5 @@ exports.deleteAll = (req, res) => {
 };
 
 exports.findAllFavorite = (req, res) => {
-  res.send({ message: "findAllFavorite handler" });
+  res.send({ message: "findAllFavorite handler"   });
 };
